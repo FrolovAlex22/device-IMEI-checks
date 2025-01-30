@@ -21,9 +21,9 @@
    ```
    pip install -r requirements.txt
    ```
-4. Запуск программы:
-   ```
-   python app.py
+4. Запустите Docker Compose:
+
+   docker-compose up --build -d
    ```
 
 ## Технологии:
