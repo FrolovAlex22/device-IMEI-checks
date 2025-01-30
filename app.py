@@ -28,23 +28,11 @@ bot.white_list = config.tg_bot.admin_ids
 
 
 async def on_startup(bot):
-
-    # run_param = True
-    run_param = False
-    # if run_param:
-    #     await drop_db()
-
-    # await create_db()
-
-
-async def on_shutdown(bot):
-    logger.info("Бот лёг")
+    logger.info("Начало работы бота")
 
 
 async def main():
-    logger.info("Начало работы бота")
     dp.startup.register(on_startup)
-    dp.shutdown.register(on_shutdown)
     dp.include_router(user_handlers.user_router)
     dp.include_router(other_handlers.other_router)
     await dp.start_polling(bot)

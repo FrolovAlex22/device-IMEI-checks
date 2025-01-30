@@ -8,6 +8,8 @@ load_dotenv(find_dotenv())
 
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 ADMIN_IDS = [int(i) for i in os.getenv('ADMIN_IDS').split(',')]
+IMEI_TOKEN = os.getenv('IMEI_TOKEN')
+URL = os.getenv('URL')
 
 
 @dataclass
@@ -26,5 +28,5 @@ def load_config() -> Config:
         tg_bot=TgBot(
             token=BOT_TOKEN,
             admin_ids=list(ADMIN_IDS)
-        )
+        ),
     )

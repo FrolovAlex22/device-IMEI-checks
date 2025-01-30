@@ -1,10 +1,7 @@
 import logging
 
-from aiogram import F, Router
-from aiogram.filters import StateFilter, CommandStart
-from aiogram.fsm.context import FSMContext
-from aiogram.fsm.state import State, StatesGroup
-from aiogram.types import Message, CallbackQuery, ContentType, ReplyKeyboardRemove, Contact
+from aiogram import Router
+from aiogram.types import Message
 
 from lexicon.lexicon import LEXICON_OTHER
 
@@ -14,9 +11,7 @@ other_router = Router()
 logger = logging.getLogger(__name__)
 
 
-
-
-@other_router.message(CommandStart())
+@other_router.message()
 async def start_cmd_other(message: Message):
     """Сообщение в случае команды /start"""
     logger.info(
