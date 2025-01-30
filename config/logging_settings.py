@@ -53,5 +53,9 @@ logging_config = {
             "level": "INFO",
             "handlers": ["stdout", "error_file"]
         },
+        "handlers.other_handlers": {
+            "level": "INFO",
+            "handlers": ["stdout"]
+        },
     },
 }

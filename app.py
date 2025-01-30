@@ -24,6 +24,8 @@ bot = Bot(
 )
 dp = Dispatcher()
 
+bot.white_list = config.tg_bot.admin_ids
+
 
 async def on_startup(bot):
 
